@@ -1,0 +1,56 @@
+파이프라인은 공식적으로 채택되지 않은 연산자이기 때문에 
+기능을 사용하려면 바벨 플러그인을 설치해야 함
+설치 코드)npm i --save-dev @babel/plugin-proposal-pipeline-operator @babel/core
+그 후 .babelrc 파일을 수정
+{
+    "presets":["next/babel"],
+    "plugins":[
+        [
+           @babel/plugin-proposal-pipeline-operator 
+           ?
+        ]
+    ]
+}
+
+개발 시 타입스크립트를 주 언어로 쓰고 싶다면 타입스크립트 전용 플러그인을 설치하고 설정 바꾸기
+-->프로젝트 생성시 선택 가능하기 떄문에 생성할 때 설정 할 것!
+
+웹팩은 특정 라이브러리, 페이지, 기능에 대해 컴파일된 코드를 전부 포함하는 번들을 만들어 줌
+만약 SASS나 LESS 같은 CSS 전처리기를 사용해서 개발하고 싶다면. 웹팩 설정을 수정해 주면 됨
+
+처음에 Next 프로젝트를 생성할 때 오류로 생성되진 않는 경우가 있음
+이 것은 CRA가 설치되어 있지 않아서 생기는 현상으로
+create-react-app 을 Global로 설치해 주면 됨
+$npmi-g create-react-app
+이후 프로젝트를 생성
+$npx create-next-app@latest
+
+Next.js 12이후 babel의 지원이 중지되고 SWC로 그 기능이 대체됨
+그렇기에 최신 버전에서 babel은 오류가 남
+
+Transpile은 어떻게 동작하나
+babel은 ECMAScript와 같은 자바스크립트 최신버전이나, TypeScript를 이전 버전의 코드로
+변환시켜주는 Transpile 도구임
+개발자가 작성한 코드 -> Parse -> Transform ->Generate ->이전 버전의 코드
+Babel의 parser는 잡바스크립트를 컴퓨터가 이해할 수 있는 코드 구조인 Abstract Syntax Tree(AST)
+로 변환해 주는 역할을 수행
+Babel의 traverse모듈은 전체 트리상태(AST)를 유지하며 노드 교체, 제거, 추가를 담당함
+마지막 generator가 수정된 ASt를 일반 코드로 변환해 줌
+
+SWC도 Babel과 같은 자바스크립트 트랜스 컴파일러임
+Next 12 이후 부터 Babel에서 SWC로 교체됨
+SWC는 Rust로 작성되어 있어 Babel에 비해서 속도가 훨씬 빠름
+
+Babel의 단점
+1.Babel로 변환된 코드를 이해하기 어려움
+2.원 코드에 비해 변환코드의 길이가 늘어남
+3.변환에 시간이 많이 걸림
+
+SWC의 장점
+1.Next 12이후 별도의 설정 없이 SWC를 사용 가능(Next.js에 내장)
+2.변환 속도가 빠름
+3.
+4.
+
+-렌
+
