@@ -1,0 +1,28 @@
+Next는 서버사이드 렌더링 외에도 많은 내장 컴포넌트와 함수를 제공
+
+3장 학습 내용[
+    클라이언트와 서버에서의 라우팅 시스템 작동 방식
+    페이지간 이동 최적화
+    Next.js가 정적 자원을 제공하는 방법
+    자동 이미지 최적화와 새로운 Image컴포넌트를 사용한 이미지 제공 최적화 기법
+    컴포넌트에서 HTML메타데이터를 처리하는 방법
+    _app.js와 _documents.js 파일내용 및 커스터마이징 방법
+]
+
+3-1
+React의 React Router, Reach Router 등은 클라이언트 라우팅만 구현할 수 있음
+Next는 파일 시스템 기반 페이지와 라우팅을 함
+페이지는 /pages 디렉토리 안의 *.js *.jsx *.ts *.tsx 파일에서 export한 React 컴포넌트임
+ex)function Homepage(){
+    return <div>This is the homepage</div>
+}
+export default Homepage;
+
+만일 블로그와 같이 컨텐츠를 분리해야 한다면
+/pages 아래 디렉토리를 만들고 라우팅 규칙을 만들면 됨
+/pages 디렉토리 내부에는 계층적 구조로 라우팅 규칙을 만들 수 있음
+/pages/posts 안에 index.js 와 [slug].js를 만들어 jsx를 반환함
+
+/pages/posts/디렉트리 내에 Index.js만 간단하게 만들면 localhost:3000/posts로 접속이 가능함
+
+
