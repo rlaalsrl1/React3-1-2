@@ -1,0 +1,12 @@
+_app.jsx는 서버에 요청할 때 가장 먼저 실행되는 컴포넌트
+페이지에 적용할 공통 레이아웃을 선언하는 곳
+
+
+_documents.jsx 는 _app.jsx 다음에 실행됨
+각 페이지에서 공통적으로 사용될 html, head,body안에 들어갈 내용을 선언
+
+layout.jsx는 app디렉토리 아래에 위치함
+layout.jsx는 Page Project에서 사용하던 _app.jsx와 _documents.jsx를 대체함
+
+metadata에서 모든 페이지에 적용할 meta data를 선언할 수 있음
+title의 경우에는 각 페이지에 맞게 작성하는것이 SEO에 좋음
