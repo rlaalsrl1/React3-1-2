@@ -1,8 +1,8 @@
 export default async function Foo() {
   return (
     <>
-      <NavBar />
-      midterm/src/page/Contact.jsx
+      <h1>Foo</h1>
+      <h2>foo....</h2>
     </>
   );
 }

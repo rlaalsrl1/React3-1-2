@@ -1,3 +1,10 @@
+import NavBar from "@/app/components/Navbar";
+
 export default async function Foo() {
-  return <>midterm\src\page\About.jsx</>;
+  return (
+    <>
+      <NavBar />
+      midterm\src\page\About.jsx
+    </>
+  );
 }

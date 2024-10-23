@@ -1,12 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Pagerouter from "/kmk_git/React3-1-2/app-router/src/app/about/page.jsx";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        {/* <p>
+        <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
         </p>
@@ -89,8 +88,7 @@ export default function Home() {
           <p>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a> */}
-        <Pagerouter></Pagerouter>
+        </a>
       </div>
     </main>
   );
