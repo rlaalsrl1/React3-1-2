@@ -1,0 +1,8 @@
+.woo {
+  color: green;
+  background: red;
+}
+.gie {
+  composes: woo;
+  color: yellow;
+}
