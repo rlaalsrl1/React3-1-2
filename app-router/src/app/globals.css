@@ -40,3 +40,17 @@ a {
     color-scheme: dark;
   }
 }
+bodylight {
+  background-color: white;
+  color: black;
+}
+bodylight a {
+  color: black;
+}
+bodyblack {
+  background-color: black;
+  color: white;
+}
+bodyblack a {
+  color: white;
+}
