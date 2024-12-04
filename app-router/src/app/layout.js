@@ -1,10 +1,9 @@
-import { Inter } from "next/font/google";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ThemeToggleButton from "./components/ThemeToggleButton";
 import "./globals.css";
 import NavBar from "./components/NavBar";
-
-const inter = Inter({ subsets: ["latin"] });
+import CounterProvider from "@/store/CounterProvider";
+import CounterDiplay from "@/features/counter/CounterDisplay";
 
 export const metadata = {
   title: {
@@ -17,15 +16,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
+      <CounterProvider>
+        
       <ThemeProvider>
         <body>
           <header>
             <h1>=====header=====</h1>
             <NavBar />
+            <CounterDiplay/>
             <ThemeToggleButton />
           </header>
+          <mail>{children}</mail>
+          <footer>
+            <h2>-----Footer -----</h2>
+          </footer>
         </body>
       </ThemeProvider>
+      </CounterProvider>
     </html>
   );
 }

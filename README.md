@@ -293,3 +293,20 @@ store, reducer, action등의 개념을 사용해 state 와 state dispatch를 관
 --미들웨어 지원 : redux-thunk,redux-saga와 같은 미들웨어를 사용해 비동기 로직을 쉽게 처리할 수 있습니다.
 --디버깅 도구 : Redux DevTools를 통해 상태 변화및 디버깅이 용이합니다.
 --모든 프레임워크와 호환 : React뿐만 아니라 다른 JavaScript 프레임워크와도 함께 사용할 수 있습니다.
+(단점)
+--설정과 코드 복잡도 : Context API에 비해 설정비 복잡하며, boilerplate 코드가 많이 필요합니다.
+--추가 라이브로리 필요 : Redux 자체가 외부 라이브러리이므로 설치 및 유지 관리가 필요합니다
+--작은 애플리케이션에는 과한 설정 : 단순한 상태 관리가 필요한 작은 애플리케이션에서는 과도한 설정일 수 있습니다.
+
+5.Redux 실습
+1.Redux 를 사용하기 위해 필요한 패키지를 설치 -- npm install @reduxjs/toolkit react-redux
+2.counterSlice 파일을 생성
+--createSlice로 Slice를 생성한 후 초기화와 reducers에 action을 설정
+--여러개의 Slice를 사용할 때도 name 필드의 값만 변경하고 그대로 사용하면 됩니다.
+3.store 설정 파일을 생성 합니다.
+--store파일은 Redux 스토어를 설정하는 파일로, 기능별 Slice 파일을 이곳에 등록합니다.
+--즉 모든 reducer를 한곳에 모아 중앙에서 관리하기 위한 파일
+--새로운 기능이 추가되면 해당 기능의 Slice를 생성하고 등록합니다.
+4.Counter Component 파일을 생성
+--useSelector는 Redux store의 상태를 선택(조회)하는데 사용됨
+--컴포넌트 내부에서 이 Hook을 사용하면 Redux store에서 필요한 state를 가져와 사용할 수 있음
